@@ -1,0 +1,90 @@
+% base/settings
+% Configuraciones globales del documento.
+% Modificar aquí y solo aquí los parámetros tipográficos.
+
+%
+% Márgenes de página
+%
+% Modificar aquí para ajustar el área de trabajo
+\geometry{
+  lmargin = 2.54cm,
+  rmargin = 2.54cm,
+  tmargin = 2.54cm,
+  bmargin = 2.54cm
+}
+
+%
+% Encabezado y pie de página
+%
+% 
+\setlength{\headheight}{14.61858pt}
+
+%
+% Espaciado entre líneas
+%
+\doublespacing
+
+%
+% Tolerancia tipográfica (control de corte de palabras)
+% Valores altos = LaTeX parte palabras menos agresivamente
+\pretolerance=100
+\tolerance=800
+
+
+%
+% Modificaciones a los estilos por defecto de book
+%
+% Elimina el \thispagestyle{plain} automático del \chapter
+% La primera página hereda el \pagestyle activo
+\patchcmd{\chapter}{\thispagestyle{plain}}{}{}{}
+
+
+%
+% Modificaciones en los títulos
+%
+% Editar el formato de títulos de capítulo
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{% % Para capítulo numerado
+  \vspace*{0pt}%
+  {\parindent\z@
+    \hangindent=0.63cm\hangafter=1%
+    \normalfont\fontsize{14}{17}\selectfont\bfseries
+    \chaptername\ \thechapter.\ #1\par\nobreak}%
+  \vspace{12pt}%
+}
+\renewcommand{\@makeschapterhead}[1]{% % Para capítulo no numerado
+  \vspace*{0pt}%
+  {\parindent\z@\centering
+    \normalfont\fontsize{14}{17}\selectfont\bfseries
+    #1\par\nobreak}%
+  \vspace{12pt}%
+}
+\makeatother
+
+
+%
+% Sangría y espacio entre párrafos
+%
+% Eliminar la sangría incial 
+\setlength{\parindent}{0pt}
+% Espaciado adicional entre parrafos
+\setlength{\parskip}{1em}
+
+%
+% Formato de secciones
+%
+% Control del formato
+% \titleformat{[nivel]}{[formato]}{[numeración]}{[espaciado entre número y título]}{[código extra]}
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+% Control del espaciado
+% \titlespacing{[nivel]}{[sangría izquierda]}{[espacio antes del título]}{[espacio después del título]}
+
+
+%
+% Configuración de display math
+%
+% Permite que ecuaciones largas corten entre páginas
+% El número es el nivel de permisividad
+\allowdisplaybreaks[1]

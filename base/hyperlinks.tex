@@ -1,0 +1,17 @@
+% hyperlinks.tex
+% Configuración de colores y comportamiento de enlaces.
+
+
+%
+% Configuración de colores de referencias
+%
+\ifhrefColorLinks
+  \hypersetup{
+    colorlinks = \hrefColorLinksTrue,    % cambiar a true para activar colores (en false por defecto pone en caja roja)
+    linkcolor  = blue,    % enlaces internos (índice, referencias cruzadas)
+    citecolor  = blue,    % citas bibliográficas
+    urlcolor   = blue,    % URLs externas
+  }
+\else
+  \hypersetup{hidelinks}% Realmente sí elimina cualquier color (comentar para mostrar color)
+\fi

@@ -1,0 +1,28 @@
+% environments.tex
+% Definición de entornos y teoremas.
+
+% TODO: Falta revisar
+
+% Entorno para enunciados de problemas (texto en rosa)
+\newenvironment{statement}[1]{\smallskip\noindent\color[rgb]{1.00, 0.00, 0.50}{\textbf{#1.}}}{}
+
+% Entorno de solución basado en proof
+\newenvironment{solution}{\begin{proof}[Solución]}{\end{proof}}
+
+% Teoremas y estructuras matemáticas
+\newtheorem{theorem}{Teorema}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem*{proposition}{Proposición}
+\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem*{postulate}{Postulado}
+\newtheorem*{axiom}{Axioma}
+
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{Definición}
+\newtheorem{example}[theorem]{Ejemplo}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Observación}
+\newtheorem*{notation}{Notación}
+\newtheorem*{note}{Nota}

@@ -1,0 +1,39 @@
+% base/format/cover
+% Portada oficial según formato PUCP FCI 2025.
+%
+% INSTRUCCIONES:
+%   - Conservar solo el bloque AUTORA o AUTOR, eliminar el otro.
+%   - Completar todos los campos marcados con [...]
+%   - Verificar que images/pucp-shield.png sea el escudo
+%     institucional circular (no el logo rectangular moderno).
+
+% Para que no haya cabecera ni pie de página
+\thispagestyle{empty}
+
+% Inserta el contenido
+\input{\texdir/cover}
+
+
+% Configuración del formato de la portada
+\begingroup
+  \fontsize{14}{17}\selectfont
+  \centering
+  \textbf{\MakeUppercase{\coverUniversity}}\par
+  \textbf{\MakeUppercase{\coverFaculty}}\par
+  \vspace{\baselineskip}
+  \includegraphics[width=5.86cm]{\coverLogo}\par
+  \textbf{\coverTitle}\par
+  \vspace{\baselineskip} 
+  \textbf{\MakeUppercase{{\coverAuthorMaleFemale}}}\par
+  \coverAuthor\par
+  \vspace{\baselineskip}
+  \textbf{\MakeUppercase{{\coverAdvisorMaleFemale}}}\par
+  \coverAdvisor\par
+  \vspace{\baselineskip}
+  \textbf{\coverDate}\par
+
+\endgroup
+
+\newpage
+
+

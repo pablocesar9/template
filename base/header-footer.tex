@@ -1,0 +1,41 @@
+% header-footer.tex
+% Configuraciones del header y footer
+
+%
+% Estilo para páginas preliminares (numeración: 1, 2, 3)
+%
+\fancypagestyle{preliminary}{
+  \fancyhf{}
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+
+%
+% Estilo para el cuerpo del documento (numeración: Página 1 de 12)
+%
+\fancypagestyle{body}{
+  \fancyhf{}
+\fancyfoot[R]{\normalsize Página \textbf{\thepage}\ de \textbf{\pageref*{LastMainPage}}}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+
+%
+% Primera página de cada capítulo (LaTeX lo aplica automáticamente)
+%
+% Se ajusta como el de body
+\fancypagestyle{plain}[body]{}
+
+
+%
+% Estilo para el anexo (numeración: A-1, A-2, A-3)
+%
+\fancypagestyle{annex}{
+  \fancyhf{}
+  \fancyfoot[R]{\normalsize \thepage}
+  \renewcommand{\footrulewidth}{0pt}
+}
+

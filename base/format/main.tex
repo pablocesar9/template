@@ -1,0 +1,39 @@
+% base/format/main
+
+\makeindex
+
+\begin{document}
+
+% Páginas preliminares
+\pagestyle{preliminary}
+\pagenumbering{arabic} % Para inicializar el contador
+\input{template/base/format/cover-format} % Contiene su propia configuración
+
+\input{template/base/format/abstract-format}
+\input{template/base/format/topic-format}
+
+
+\pagestyle{body}
+\input{template/base/format/indexes-format}
+
+
+% --- Cuerpo del documento (numeración arábiga) ---
+\include{\texdir/chapter-generalities}
+\include{\texdir/chapter-framework}
+\include{\texdir/chapter-state-of-art}
+\include{\texdir/chapter-result-01}   % copiar y renombrar a chapter-result-02, etc.
+\include{\texdir/conclusion}
+
+% --- Sección final ---
+\input{template/base/format/references-format}
+
+\input{template/base/format/annexes-format}
+
+% \label{LastMainPage} % Movido a references
+\appendix % Solo cambia el formato
+\renewcommand{\thepage}{A-\arabic{page}}
+\setcounter{page}{1}
+\pagestyle{annex}   % estilo propio sin "de Y"
+\input{\texdir/annex-project-plan}
+
+\end{document}

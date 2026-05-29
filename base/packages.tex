@@ -1,0 +1,117 @@
+% base/package
+
+%
+% Codificación
+%
+% Codificación de salida: acentos, ñ, etc. como glifos reales
+\usepackage[T1]{fontenc}
+% Codificación de entrada: acepta ó, ñ directamente en el .tex
+% En opciones modernas es por default
+\usepackage[utf8]{inputenc}       
+
+
+%
+% Idioma
+%
+% Tipografía según idioma activo (guiones, fechas, títulos)
+\usepackage[english, spanish]{babel}  
+% Comillas tipográficas correctas; requerido por biblatex con babel
+\usepackage{csquotes}             
+
+
+%
+% Utilidades
+%
+% Colores: \textcolor{red}{...}, \colorbox{}, definición de colores propios
+\usepackage{xcolor}     
+% Herramientas para programación en LaTeX: \AtBeginEnvironment, \patchcmd, etc.
+\usepackage{etoolbox}   
+% Lorem ipsum
+\usepackage{lipsum}
+% Para comentarios multilinea
+\usepackage{comment}
+
+
+%
+% Matemáticas
+%
+% Fuentes matemáticas: ℝ, ℕ, ℤ con \mathbb{} (carga amstext)
+\usepackage{amsmath}   
+% Símbolos extra: ∅, ∈, ⊆, ≤, etc. (carga amsfonts)
+\usepackage{amssymb}   
+% Entornos: theorem, proof, lemma, definition, etc.
+\usepackage{amsthm}    
+% Extiende amsmath: \coloneqq, corchetes extensibles, etc.
+\usepackage{mathtools} 
+% Diagramas conmutativos simples (flechas →, ↓)
+\usepackage{amscd}     
+% Define símbolos matemáticos en negrita de forma elegante
+\usepackage{bm}
+
+
+%
+% Fuente
+%
+% Para Times New Roman (texto y partes matemáticas)
+\usepackage{newtxtext, newtxmath}
+% Para tipografía fina
+\usepackage{microtype}
+
+
+%
+% Layout y geometría
+%
+% Control total del tamaño de página y márgenes
+\usepackage{geometry}   
+% Herramientas para manejar interlineado
+\usepackage{setspace}
+% Encabezados y pies de página personalizados
+\usepackage{fancyhdr}   
+% Rediseña el formato de \chapter, \section, etc.
+\usepackage{titlesec}   
+% Provee \pageref{LastPage} para "Página X de Y"
+\usepackage{lastpage}   
+
+
+%
+% Figuras, tablas y entornos
+%
+% \includegraphics{} con opciones (scale, width, angle)
+\usepackage{graphicx}   
+% Especificador [H]: coloca el flotante exactamente aquí
+\usepackage{float}      
+% Texto que rodea una figura lateralmente
+\usepackage{wrapfig}    
+% Personaliza el estilo de los \caption{}
+\usepackage{caption}    
+% Cajas con borde que pueden partirse entre páginas
+\usepackage{framed}     
+
+
+%
+% Listas
+%
+% Control fino de listas: itemize, enumerate, description
+\usepackage{enumitem}   
+
+
+%
+% Fuentes
+%
+% Letras caligráficas tipo Euler (\EuScript{A})
+\usepackage{euscript}
+
+
+%
+% Referencias e índice
+%
+% Índice analítico (admite múltiples índices)
+\usepackage{imakeidx}                                   
+% Links en PDF: refs, URLs, TOC clicables
+\usepackage{hyperref}                                   
+% \cref{} que escribe "ecuación (3)" automáticamente
+\usepackage[nameinlink]{cleveref}                       
+% Bibliografía moderna; biber como motor
+\usepackage[backend=biber, style=apa, language=spanish, sorting=nyt]{biblatex}
+
+
