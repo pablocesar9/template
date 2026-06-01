@@ -71,7 +71,7 @@
 \setlength{\parskip}{1em}
 
 %
-% Formato de secciones
+% Formato de secciones en el cuerpo e índice
 %
 % Control del formato
 % \titleformat{[nivel]}{[formato]}{[numeración]}{[espaciado entre número y título]}{[código extra]}
@@ -80,6 +80,24 @@
 \titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
 % Control del espaciado
 % \titlespacing{[nivel]}{[sangría izquierda]}{[espacio antes del título]}{[espacio después del título]}
+% Formato de la entrada de capítulo en el índice
+% {nivel}[sangría]{código arriba}{etiqueta numerada}{etiqueta sin número}{relleno + página}
+\titlecontents{chapter}[0pt]
+  {\bfseries}
+  {\chaptername\ \thecontentslabel.\enspace}
+  {}
+  {\hfill\contentspage}
+\titlecontents{section}[1.5em]
+  {}
+  {\thecontentslabel\enspace}
+  {}
+  {\hfill\contentspage}
+\titlecontents{subsection}[3.8em]
+  {}
+  {\thecontentslabel\enspace}
+  {}
+  {\hfill\contentspage}
+
 
 
 %
