@@ -45,7 +45,6 @@
 % Editar el formato de títulos de capítulo
 \makeatletter
 \renewcommand{\@makechapterhead}[1]{% % Para capítulo numerado
-  \vspace*{0pt}%
   {\parindent\z@
     \hangindent=0.63cm\hangafter=1%
     \normalfont\fontsize{14}{17}\selectfont\bfseries
@@ -88,7 +87,7 @@
   {}
   {\hfill\contentspage}
 \titlecontents{section}[1.5em]
-  {}
+  {\bfseries}
   {\thecontentslabel\enspace}
   {}
   {\hfill\contentspage}
