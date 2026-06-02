@@ -97,6 +97,25 @@
   {\hfill\contentspage}
 
 
+%
+% Formato de tablas y figuras en el cuerpo
+%
+% Aplica doble espaciado a ambas porque por defecto es 1
+\captionsetup{font={stretch=2}}
+% Redefine cómo iría el caption #1: Tabla 1.1, #2: :, #3: Título
+\DeclareCaptionFormat{tablacaption}{\textbf{#1}\\\textit{#3}}
+% Redefine el formato de tabla: labelsep suele ser ":" y singlelinecheck suele
+% poner centrado si la linea cabe
+\captionsetup[table]{
+  format=tablacaption,
+  labelsep=none,
+  justification=justified,
+  singlelinecheck=false
+}
+% Redefine el formato de figura: solo pone Figura 1.1 como negrita
+\captionsetup[figure]{labelfont=bf}
+
+
 
 %
 % Configuración de display math
@@ -104,3 +123,6 @@
 % Permite que ecuaciones largas corten entre páginas
 % El número es el nivel de permisividad
 \allowdisplaybreaks[1]
+
+
+
