@@ -103,6 +103,11 @@
 \usepackage{pdflscape}
 % Diagramas de Gantt para cronogramas (primer paquete que trae TikZ/PGF a tu preámbulo)
 \usepackage{pgfgantt}
+% pgfgantt 5.0a usa un tip de flecha tipo arrows.meta para \ganttlink que la
+% propia pgfgantt.sty no carga, lo que produce "Unknown arrow tip kind
+% 'Triangle'". Se carga aquí, en el preámbulo, para no romper el estado de
+% TikZ a mitad de documento.
+\usetikzlibrary{arrows.meta}
 
 
 %
